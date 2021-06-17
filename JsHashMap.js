@@ -4,7 +4,7 @@ const JsHashMap = function(mapSize=20) {
 };
 
 JsHashMap.prototype.hash= function (key){
-    return key.toString().length % this.size;
+    return key.toString().length % this.mapSize;
 }
 JsHashMap.prototype.get= function(key){
     let index = this.hash(key);
